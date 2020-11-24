@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: berplay
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: berplay
+  template:
+    metadata:
+      labels:
+        app: berplay
+    spec:
+      containers:
+      - image: okteto/berplay:node
+        name: berplay
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: berplay
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP  
+  ports:
+  - name: "berplay"
+    port: 3000
+  selector:
+    app: berplay
