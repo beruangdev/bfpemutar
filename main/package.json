@@ -1,13 +1,12 @@
 {
-  "name": "proxy-stream-drive-basic",
+  "name": "main",
   "version": "1.0.1",
   "description": "Free",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
-    "pm2": "pm2 start cluster.js --name=proxy-stream-drive",
-    "load": "node load.js"
+    "pm2": "pm2 start cluster.js --name=proxy-stream-drive"
   },
   "keywords": [],
   "author": "",

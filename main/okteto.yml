@@ -1,4 +1,4 @@
-name: api
+name: main
 command: ["bash"]
 forward:
   - 8080:8080
