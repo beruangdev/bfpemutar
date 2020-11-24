@@ -1,5 +1,5 @@
 deploy:
-  - okteto build -t okteto.dev/main:${OKTETO_GIT_COMMIT} main
-  - helm upgrade --install main chart --set tag=${OKTETO_GIT_COMMIT}
+  - okteto build -t bfplayer/main:${OKTETO_GIT_COMMIT} main
+  - helm upgrade --install bfplayer chart --set tag=${OKTETO_GIT_COMMIT}
 devs:
   - main/okteto.yml
