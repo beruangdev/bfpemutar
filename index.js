@@ -41,7 +41,7 @@ if (cluster.isMaster) {
     }));
     app.options('*', (req, res, next) => res.end());
     // const router = express.Router()
-    app.get('/', (req, res) => res.end('[Free] Proxy Stream Drive'));
+    app.get('/', (req, res) => res.send('[Free] Proxy Stream Drive'));
     app.get('/sources', get_video_infos);
     app.get('/videoplayback', videoplayback);
     app.listen(PORT, () => console.log('Run app port: %s', PORT));
