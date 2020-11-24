@@ -1,4 +1,4 @@
   
 .PHONY: push
 push:
-	okteto build -t beruangdev/main .
+	okteto build -t bfpemutar/main .
